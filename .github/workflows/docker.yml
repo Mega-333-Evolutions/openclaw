@@ -26,10 +26,11 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/akborana3/openclaw:latest
-            ghcr.io/akborana3/openclaw:${{ github.sha }}
+            ghcr.io/mega-333-evolutions/openclaw:latest
+            ghcr.io/mega-333-evolutions/openclaw:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
